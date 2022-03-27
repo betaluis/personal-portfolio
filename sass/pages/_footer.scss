@@ -1,0 +1,24 @@
+
+
+.footer {
+
+  &__copy {
+    text-align: center;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    a {
+      min-width: 155px;
+      text-align: center;
+    }
+    
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  }
+}

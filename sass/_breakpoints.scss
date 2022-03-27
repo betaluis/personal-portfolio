@@ -1,0 +1,24 @@
+
+
+$breakpoints: (
+  "sm": 768px,
+  "lg": 1024px
+);
+
+@mixin mobile {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktops {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}

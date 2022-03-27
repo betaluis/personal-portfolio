@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Functions & Breakpoints
+@import './breakpoints';
+@import './animation/circularAnimation';
+
+// Variables
+@import './variables';
+
+// Base and Resets
+@import './resets';
+@import './base';
+
+// Components
+@import './components/navbar';
+
+// Pages
+@import './pages/about';
+@import './pages/skills';
+@import './pages/projects';
+@import './pages/hiring';
+@import './pages/contact';
+@import './pages/footer';

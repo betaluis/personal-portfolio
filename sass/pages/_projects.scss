@@ -1,0 +1,44 @@
+.projects {
+  padding-top: 5rem;
+
+  &__item {
+    margin: 0.5rem 0;
+
+    &-title {
+      margin-bottom: 0.2rem;
+
+      i {
+        margin-right: 0.2rem;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  &__list-of-email-projects {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    li {
+      list-style-type: disc;
+      list-style-position: inside;
+      margin: 0.5rem 0;
+    }
+    a {
+      font-weight: 600;
+    }
+  }
+
+  a {
+    color: inherit;
+    border-bottom: 2px solid $dark;
+    transition: all 0.1s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      color: $primary;
+      outline: none;
+      border-bottom: 4px solid $primary;
+      margin-left: 0.2rem;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+
+
+@mixin circularAnimationKeyframe($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+
+}
+
+@mixin skillsAnimationTransform ($rotate, $translateX) {
+  transform: rotate(#{$rotate}deg) translateX(#{$translateX}px) rotate(-#{$rotate}deg);
+}
+
+@mixin buildSkillsAnimation($skillNumber, $size, $rotate, $translate) {
+
+  @if $size == large {
+    @include circularAnimationKeyframe('#{$skillNumber}_#{$size}') {
+      0% {
+        @include skillsAnimationTransform(#{$rotate}, #{$translate});
+      }
+      100% {
+        @include skillsAnimationTransform(#{$rotate + 360}, #{$translate});
+      }
+    }
+  }
+  @if $size == small {
+    @include circularAnimationKeyframe('#{$skillNumber}_#{$size}') {
+      0% {
+        @include skillsAnimationTransform(#{$rotate}, #{$translate - 70});
+      }
+      100% {
+        @include skillsAnimationTransform(#{$rotate + 360}, #{$translate - 70});
+      }
+    }
+  }
+
+}
+
+// Skill One
+@include buildSkillsAnimation(skillOne, large, 0, 150); 
+@include buildSkillsAnimation(skillOne, small, 0, 180); 
+
+// Skill Two
+@include buildSkillsAnimation(skillTwo, large, 60, 150); 
+@include buildSkillsAnimation(skillTwo, small, 60, 180); 
+
+// Skill Three
+@include buildSkillsAnimation(skillThree, large, 120, 150); 
+@include buildSkillsAnimation(skillThree, small, 120, 180); 
+
+// Skill Four
+@include buildSkillsAnimation(skillFour, large, 180, 150); 
+@include buildSkillsAnimation(skillFour, small, 180, 180); 
+
+// Skill Five
+@include buildSkillsAnimation(skillFive, large, 240, 150); 
+@include buildSkillsAnimation(skillFive, small, 240, 180); 
+
+// Skill Six
+@include buildSkillsAnimation(skillSix, large, 300, 150); 
+@include buildSkillsAnimation(skillSix, small, 300, 180); 
+
+

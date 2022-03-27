@@ -1,0 +1,28 @@
+.hiring {
+  &__list {
+    // margin: 1rem 0;
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  &__resume {
+    padding-bottom: 4rem;
+    a {
+      display: inline-block;
+      color: inherit;
+      transition: all 0.1s ease-in-out;
+      box-shadow: 0 2px 0 $dark;
+      padding: 0;
+      line-height: 1.5;
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        color: $primary;
+        outline: none;
+        box-shadow: 0 4px 0 $primary;
+        transform: translateY(-0.1rem);
+      }
+    }
+  }
+}

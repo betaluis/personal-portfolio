@@ -1,0 +1,231 @@
+header { 
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $lighter;
+  z-index: $z-fixed;
+
+  .header__content {
+    height: $header-height;
+    padding: 0 $bumper;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1800px;
+  }
+
+  .header__profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .sep {
+      display: block;
+      width: 2px;
+      height: 25px;
+      background-color: $light-gray;
+    }
+
+    &-img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &-social {
+      display: flex;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i:hover {
+          color: dodgerblue;
+        }
+      }
+
+      i {
+        font-size: 1.4rem;
+        color: $dark;
+        margin-right: 5px;
+      }
+
+      i.linkedin {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .header__toggle {
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+
+    &-line {
+      display: block;
+
+      height: 2px;
+      width: 20px;
+
+      background-color: $text-color;
+
+      transition: transform 0.2s ease-in-out;
+    }
+    &-line:nth-child(2) {
+      margin: 0.25rem 0;
+    }
+
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    @include tablets {
+      display: flex;
+    }
+  }
+
+  &__content {
+    height: 100%;
+  }
+
+  &__menu {
+    align-self: start;
+  }
+
+  &__item {
+    margin: 2rem 0;
+
+    @include tablets {
+      margin-top: 0;
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $dark;
+    cursor: pointer;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    @include tablets {
+      font-size: $normal-font-size;
+      font-weight: 500;
+    }
+  }
+
+  &__dots {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include mobile {
+      display: none;
+    }
+
+    ul {
+      position: relative;
+      padding-left: 50px;
+    }
+
+    li {
+      padding: 0px 0 10px 10px;
+      margin-top: 1rem;
+    }
+
+    a {
+      position: relative;
+      display: block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -37px;
+        display: block;
+        height: 8px;
+        width: 8px;
+        background-color: #ddd;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &.active {
+        font-weight: 800;
+        &::after {
+          background-color: $dark;
+          width: 14px;
+          height: 14px;
+          left: -40px;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    position: fixed;
+    top: $header-height;
+    left: -100%;
+
+    width: 100%;
+    height: calc(100vh - $header-height);
+    overflow-y: hidden;
+
+    background-color: rgba($lighter, 0.97);
+    backdrop-filter: blur(5px);
+
+    z-index: $z-fixed;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// Utility classes specific for navbar with js.
+.show {
+  left: 0;
+}
+.no-scroll {
+  height: 100%;
+  overflow-y: hidden;
+}
+.close {
+  position: relative;
+  transform: rotate(360deg);
+
+  .header__toggle-line {
+    &:nth-child(1) {
+      position: absolute;
+      top: 0;
+      transform: rotate(135deg);
+    }
+    &:nth-child(3) {
+      position: absolute;
+      top: 0;
+      transform: rotate(-135deg);
+    }
+    &:nth-child(2) {
+      margin: 0;
+      opacity: 0;
+      transition: none;
+    }
+  }
+}
+.menu-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
