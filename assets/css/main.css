@@ -733,10 +733,18 @@ header .header__toggle-line:nth-child(2) {
 .about__profession {
   grid-area: profession;
   align-self: start;
-  background-color: #333;
+  background-color: dodgerblue;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fffafa;
   padding: 1.5rem;
   border-radius: 15px;
+  margin-left: -60px;
+  margin-top: 10rem;
+}
+@media only screen and (max-width: 768px) {
+  .about__profession {
+    margin: 0;
+  }
 }
 .about__profession p {
   font-size: clamp(0.7rem, 3vw, 1rem);
@@ -745,25 +753,40 @@ header .header__toggle-line:nth-child(2) {
   grid-area: img;
   border-radius: 15px;
   overflow: hidden;
+  margin-bottom: -100px;
+  z-index: -10;
+}
+@media only screen and (max-width: 768px) {
+  .about__img {
+    margin: 0;
+  }
 }
 .about__img img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
+  border-radius: 15px;
 }
 .about__text {
   grid-area: about;
   position: relative;
   padding: 1.5rem;
   border-radius: 15px;
+  background-color: #fffafa;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: -253px;
+  margin-top: 0px;
 }
-.about__addtional-text {
+@media only screen and (max-width: 768px) {
+  .about__text {
+    margin: 0;
+  }
+}
+.about__additional-text {
   padding-top: 0;
 }
 @media only screen and (min-width: 768px) {
-  .about__addtional-text {
-    padding-top: 1.5rem;
+  .about__additional-text {
+    padding-top: 4rem;
   }
 }
 .about__date {
