@@ -659,9 +659,9 @@ header .header__toggle-line:nth-child(2) {
 }
 .nav__dots a.active::after {
   background-color: #333;
-  width: 14px;
-  height: 14px;
-  left: -40px;
+  width: 11px;
+  height: 11px;
+  left: -38.5px;
 }
 @media only screen and (max-width: 768px) {
   .nav {

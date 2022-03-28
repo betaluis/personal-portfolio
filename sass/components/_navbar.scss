@@ -1,4 +1,4 @@
-header { 
+header {
   position: sticky;
   top: 0;
   left: 0;
@@ -171,9 +171,9 @@ header {
         font-weight: 800;
         &::after {
           background-color: $dark;
-          width: 14px;
-          height: 14px;
-          left: -40px;
+          width: 11px;
+          height: 11px;
+          left: -38.5px;
         }
       }
     }
