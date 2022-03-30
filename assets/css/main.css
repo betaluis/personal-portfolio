@@ -540,6 +540,10 @@ header .header__profile-img {
   height: 56px;
   border-radius: 50%;
   overflow: hidden;
+  transition: transform 0.1s ease-in-out;
+}
+header .header__profile-img:hover {
+  transform: scale(1.1);
 }
 header .header__profile-social {
   display: flex;
@@ -789,9 +793,42 @@ header .header__toggle-line:nth-child(2) {
     padding-top: 4rem;
   }
 }
+.about__event p {
+  margin: 0 0 10px 0;
+}
+@media only screen and (min-width: 768px) {
+  .about__event {
+    display: flex;
+  }
+}
+.about__event .bxl-react {
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+  color: #6ac9e2;
+}
+.about__event .bx-code-alt {
+  color: #df6231;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+.about__event .bxs-user-pin {
+  font-size: 20px;
+  position: relative;
+  top: 3px;
+  color: #50b694;
+}
+.about__event .bxs-component {
+  font-size: 20px;
+  position: relative;
+  top: 3px;
+  color: #a985b4;
+}
 .about__date {
   font-weight: bold;
   margin-right: 0.5rem;
+  color: dodgerblue;
 }
 
 .skills {
@@ -1090,6 +1127,9 @@ header .header__toggle-line:nth-child(2) {
 .contact__form input:focus,
 .contact__form textarea:focus {
   outline-color: #f04242;
+}
+.contact__form textarea {
+  min-height: 100px;
 }
 .contact__form button {
   position: relative;

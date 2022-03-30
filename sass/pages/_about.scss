@@ -88,8 +88,42 @@
     }
   }
 
+  &__event {
+    p {
+      margin: 0 0 10px 0;
+    }
+    @include tablets {
+      display: flex;
+    }
+    .bxl-react {
+      font-size: 20px;
+      position: relative;
+      top: 4px;
+      color: #6ac9e2;
+    }
+    .bx-code-alt {
+      color: #df6231;
+      font-size: 20px;
+      position: relative;
+      top: 2px;
+    }
+    .bxs-user-pin {
+      font-size: 20px;
+      position: relative;
+      top: 3px;
+      color: rgb(80, 182, 148);
+    }
+    .bxs-component {
+      font-size: 20px;
+      position: relative;
+      top: 3px;
+      color: rgb(169, 133, 180);
+    }
+  }
+
   &__date {
     font-weight: bold;
     margin-right: 0.5rem;
+    color: $primary;
   }
 }
