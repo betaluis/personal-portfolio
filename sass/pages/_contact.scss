@@ -1,5 +1,5 @@
 .contact {
-  background-color: rgb(253, 185, 185);
+  background: linear-gradient(-37deg, #89c1f7 22%, #b2f4ff);
   border-radius: $b-radius;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
@@ -36,7 +36,7 @@
       resize: vertical;
 
       &:focus {
-        outline-color: $secondary;
+        outline-color: $primary;
       }
     }
 
@@ -57,8 +57,8 @@
       box-shadow: 0px 2px 0 $dark;
 
       &:hover {
-        background-color: darken($secondary, 10%);
-        border-color: darken($secondary, 10%);
+        background-color: lighten($secondary, 10%);
+        border-color: lighten($secondary, 10%);
       }
       &:active {
         box-shadow: 0 0 0 rgba(0, 0, 0, 0);
