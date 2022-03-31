@@ -743,7 +743,7 @@ header .header__toggle-line:nth-child(2) {
 .about__profession {
   grid-area: profession;
   align-self: start;
-  background-color: dodgerblue;
+  background: linear-gradient(173deg, dodgerblue 63%, #4acdff);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fffafa;
   padding: 1.5rem;
