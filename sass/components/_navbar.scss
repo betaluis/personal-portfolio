@@ -43,13 +43,21 @@ header {
 
     &-social {
       display: flex;
+      align-items: center;
 
       a {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: $dark;
 
-        i:hover {
+        &:visited {
+          color: $dark;
+          border: 1px solid red;
+        }
+
+        i:hover,
+        &:hover {
           color: dodgerblue;
         }
       }

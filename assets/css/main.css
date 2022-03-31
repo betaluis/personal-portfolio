@@ -547,13 +547,19 @@ header .header__profile-img:hover {
 }
 header .header__profile-social {
   display: flex;
+  align-items: center;
 }
 header .header__profile-social a {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #333;
 }
-header .header__profile-social a i:hover {
+header .header__profile-social a:visited {
+  color: #333;
+  border: 1px solid red;
+}
+header .header__profile-social a i:hover, header .header__profile-social a:hover {
   color: dodgerblue;
 }
 header .header__profile-social i {
@@ -1118,7 +1124,7 @@ header .header__toggle-line:nth-child(2) {
 .contact__form input,
 .contact__form textarea {
   padding: 1rem;
-  font-size: clamp(0.7rem, 3vw, 1rem);
+  font-size: 16px;
   border: 2px solid #333;
   border-radius: 5px;
   font-family: "Poppins", sans-serif;
