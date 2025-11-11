@@ -738,6 +738,7 @@ header .header__toggle-line:nth-child(2) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "img profession" "img about";
     margin-top: 1.5rem;
+    margin-bottom: 8rem;
   }
 }
 .about__profession {
